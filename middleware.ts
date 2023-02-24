@@ -41,9 +41,7 @@ export async function middleware(request: NextRequest) {
 
     const domain = adaptHostnameToCookie(request.nextUrl.host);
 
-    response.cookies.set("marketplace-referral", JSON.stringify(referralData), {
-      domain,
-    });
+    response.cookies.set("marketplace-referral", JSON.stringify(referralData));
   }
 
   return response;
